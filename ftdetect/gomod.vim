@@ -1,5 +1,5 @@
 au! BufRead,BufNewFile *.mod,*.MOD
-autocmd BufRead,BufNewFile go.mod call s:gomod()
+autocmd BufRead,BufNewFile go.{,*.}mod call s:gomod()
 
 fun! s:gomod()
   for l:i in range(1, line('$'))
